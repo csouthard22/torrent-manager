@@ -1,0 +1,32 @@
+# qBittorrent Connection Details
+qbittorrent:
+  host: localhost
+  port: 8080
+  username: admin
+  password: adminpass
+
+# Logging Configuration
+log_path: /logs/qbittorrent_cleanup.log
+
+# Cleanup Tool Configuration
+check_interval: 3600  # Check every hour
+deletion_mode: manual  # Options: manual, automatic
+deletion_delay_days: 30  # Days to wait before auto-deletion
+
+# Tracking Seed Time Requirements (in seconds)
+tracker_seed_times:
+  'https://example.tracker.com': 604800  # 7 days
+  'default': 259200  # 3 days
+
+# Minimum ratio before considering deletion
+minimum_ratio: 1.0
+
+# Ignore List (torrents to never delete)
+ignore_list:
+  - "Important Torrent"
+  - "Another Protected Torrent"
+
+# Notification Configuration
+notifications:
+  type: notifiarr
+  notifiarr_api_key: your_notifiarr_api_key

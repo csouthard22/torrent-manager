@@ -22,8 +22,8 @@ A Python-based tool to manage qBittorrent torrents, focusing on:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/qbittorrent-cleanup.git
-cd qbittorrent-cleanup
+git clone https://github.com/csouth/torrent-manager.git
+cd torrent-manager
 ```
 
 2. Configure `config.yaml`:
@@ -33,7 +33,7 @@ cd qbittorrent-cleanup
 
 3. Build Docker container:
 ```bash
-docker build -t qbittorrent-cleanup .
+docker build -t torrent-manager .
 ```
 
 4. Run the container:
@@ -41,7 +41,7 @@ docker build -t qbittorrent-cleanup .
 docker run -d \
   -v /path/to/config:/app/config.yaml \
   -v /path/to/logs:/logs \
-  qbittorrent-cleanup
+  torrent-manager
 ```
 
 ## Configuration
